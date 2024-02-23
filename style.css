@@ -1,18 +1,294 @@
 body {
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 7fr;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 200px 1fr;
+    font-family: Roboto, sans-serif;
 }
+
+/* SIDEBAR */
 
 .sidebar {
     grid-area: 1 / 1 / 3 / 2;
+    background-color: #38bdf8;
+    color: white;
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 2fr;
+    justify-content: start;
+    height: 1fr;
 }
 
-.header {
-    grid-area: 1 / 2 / 3 / 3;
+.menu-item {
+    display: flex;
+    gap: 10px;
+    margin-left: 5px
 }
+
+.menu-item > svg {
+    align-self: center;
+}
+
+.sidebar > * {
+    margin: 0 40px 20px 10px
+}
+
+h1 {
+    align-self: center;
+}
+
+.header2 {
+    display: flex;
+    gap: 10px
+}
+
+.header2 > svg {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+}
+
+svg {
+    fill: white;
+    width: 20px;
+    height: 20px
+}
+
+ul {
+    list-style-type: none
+}
+
+/* HEADER */
+
+ .header {
+    display: grid;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+
+.upper-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    gap: 20px
+}
+
+.input > input {
+    width: 40vw;
+    border-radius: 10px;
+}
+
+.input > svg {
+    fill: black;
+    width: 25px;
+    height: 25px
+}
+
+.profile {
+    display: flex;
+    gap: 20px;
+    margin: 15px
+}
+
+.profile > svg {
+    fill: black;
+    width: 20px;
+    height: 20px;
+    margin: auto 0 auto 0
+}
+
+.profile > p {
+    font-weight: bold;
+    font-size: larger;
+    margin: auto 0 auto 0
+}
+
+.lower-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lower-header > div > svg {
+    fill: black;
+    width: 60px;
+    height: 60px;
+    grid-area: 1 / 1 / 3 / 2;
+    margin: auto 0 auto 0
+}
+
+.hi > p {
+    font-weight: bold;
+}
+
+.hi > p:first-child {
+    font-size: large;
+    margin: auto 0 0 0
+}
+
+.hi > p:last-child {
+    font-size: x-large;
+    margin: 0 0 auto 0
+}
+
+.hi {
+    display: flex;
+    grid-area: 1 / 2 / 3 / 3;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lower-header > div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-self: center;
+    margin: 15px;
+    gap: 15px
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+
+}
+
+.buttons > button {
+    width: 100px;
+    height: 40px;
+    background-color: #38bdf8;
+    border: #38bdf8 solid;
+    border-radius: 30px;
+}
+
+.buttons > button:hover {
+    background-color: white; 
+}
+
+/* MAIN-CONTENT */
 
 .main-content {
     grid-area: 2 / 2 / 3 / 3;
-    display: grid
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 30px 1fr;
+    background-color: #e2e8f0;
+    padding: 35px;
+    gap: 15px
+}
+
+.announcements {
+    /* grid-area: 2 / 2 / 3 / 3; */
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container {
+    grid-area: 1 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.user > svg {
+    fill: black;
+    align-self: center;
+    width: 35px;
+    height: 35px;
+}
+
+.user {
+    display: flex;
+    gap: 15px
+}
+.header-projects {
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 0
+}
+
+.header-announcements {
+    margin: 0
+}
+
+.header-trending {
+    margin: 0 
+}
+
+.projects {
+    display: grid;
+    grid-area: 2 / 1 / 3 / 2;
+    grid-template-columns: repeat(auto-fit, 360px);
+    grid-template-rows: repeat(auto-fit, 150px);
+    gap: 15px;
+    height: 1000px
+}
+
+.projects > .card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    border-left: 11px orange solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icons > svg {
+    fill: black;
+    width: 20px;
+    height: 20px
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text > p {
+    margin: 0 0 auto 0;
+    font-size: 14px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    align-self: flex-end
+}
+
+.news:first-child {
+    border-bottom: 2px #cbd5e1 solid;
+    padding-bottom: 15px;
+}
+
+.news:last-child {
+    border-top: 2px #cbd5e1 solid;
+    padding-top: 15px;
+}
+
+.news > p {
+    font-size: 14px;
 }
